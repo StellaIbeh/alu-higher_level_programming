@@ -6,7 +6,7 @@ if number < 0:
     last = -last
     print("Last digit of {} is {} and is ".format(number, last), end="")
 if last > 5:
-     print("Last digit of", number, "is", number, "greater than 5")
+     print("Last digit of", number, "is", number, "and is greater than 5")
 elif last == 0:
     print("Last digit of", number, "is", number,"and is 0")
 elif last < 6:
