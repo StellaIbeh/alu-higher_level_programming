@@ -1,2 +1,1 @@
-alu-higher_level_programming
-Scripts and commands
+This is my second python programming
