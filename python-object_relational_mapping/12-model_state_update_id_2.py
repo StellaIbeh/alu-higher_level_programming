@@ -15,4 +15,4 @@ if __name__ == "__main__":
     st = session.query(State).filter_by(id=2).first()
     st.name = "New Mexico"
     session.commit()
-    session.close()
+    session.close() 
