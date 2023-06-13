@@ -1,4 +1,4 @@
-#!/usr/env/node
+#!/usr/bin/node
 const number = process.argv[2];
 
 if (!isNaN(number)) {
