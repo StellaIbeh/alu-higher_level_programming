@@ -16,4 +16,3 @@ if (!Number.isNaN(size)) {
 } else {
   console.log('Missing size');
 }
-
