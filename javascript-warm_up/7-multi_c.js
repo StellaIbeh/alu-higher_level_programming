@@ -1,9 +1,8 @@
-#!/usr/bin/node
-const args = process.argv;
-const argNum = Number (argv[2]);
-if (argNum) {
-  for (let a = 0; a < argNum; a++) {
-console.log('C is fun');
+#!/usr/bin/node    
+const argNum = Number(process.argv[2]);
+if (!Number.isNaN(argNum)) {
+  for (let i = 0; i < argNum; i++) {
+    console.log('C is fun');
   }
 } else {
   console.log('Missing number of occurrences');
