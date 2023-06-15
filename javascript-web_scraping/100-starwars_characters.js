@@ -1,22 +1,17 @@
 #!/usr/bin/node
-const request = require('request');
-const args = process.argv;
 
-request(`https://swapi-api.hbtn.io/api/films/${args[2]}`, function (error, response, body) {
+const request = require('request');
+
+request('http://swapi-api.hbtn.io/api/films/' + process.argv[2], function (error, response, body) {
   if (error) {
-    console.log(error);
-  } else {
-    const data = JSON.parse(body);
-    const charEnd = data.characters;
-    const loopTime = charEnd.length;
-    for (let i = 0; i < loopTime; i++) {
-      request(charEnd[i], function (error, response, body) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log(JSON.parse(body).name);
-        }
-      });
-    }
+    console.error(error);
   }
+  JSON.parse(body).characters.forEach(function (url, callback) {
+    request(url, function (error, response, body) {
+      if (error) {
+        console.error(error);
+      }
+      console.log(JSON.parse(body).name);
+    });
+  });
 });
